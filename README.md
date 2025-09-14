@@ -1,6 +1,6 @@
-# Mumbai Swap - Skill & Goods Bartering Platform
+# SwapSewa - Skill & Goods Bartering Platform
 
-Mumbai Swap is a platform that enables users to barter skills and goods with each other. For example, if you know how to play carrom and want to learn chess, you can find someone who knows chess and wants to learn carrom, and you can exchange your skills.
+SwapSewa is a platform that enables users to barter skills and goods with each other. For example, if you know how to play carrom and want to learn chess, you can find someone who knows chess and wants to learn carrom, and you can exchange your skills.
 
 ## Features
 
@@ -83,30 +83,105 @@ The API is organized around RESTful principles with the following main endpoints
 - `/api/matches`: Match discovery and management
 - `/api/messages`: Chat and communication
 - `/api/skills`: Skill management
-- `/api/interests`: Interest management
-- `/api/notifications`: User notifications
-
-## Socket.io Events
-
-The application uses Socket.io for real-time functionality:
-
-- `join-conversation`: Join a conversation room
-- `typing`: Indicate user is typing
-- `new-message`: New message notification
-- `call-signal`: WebRTC signaling for video/audio calls
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Thanks to all contributors who have helped with this project
+ # SwapSewa
+ 
+ SwapSewa is a full-stack web application designed to facilitate skill and service exchange within a trusted community. Users can offer, request, and trade skills or services, chat securely, and manage their exchanges with a modern, intuitive interface.
+ 
+ ## Features
+ - User authentication and onboarding
+ - Skill and service listings (offerings/needs)
+ - Real-time chat and messaging
+ - Community dashboard and wallet
+ - Admin dashboard for user and report management
+ - Notifications and reporting system
+ - Blockchain transaction model (for advanced use)
+ - Responsive UI with Next.js and Tailwind CSS
+ 
+ ## Tech Stack
+ - **Frontend:** Next.js, React, Tailwind CSS
+ - **Backend:** Node.js, Express, MongoDB (Mongoose)
+ - **Real-time:** Socket.io
+ - **Authentication:** JWT, NextAuth
+ - **Deployment:** Vercel, Railway, Render
+ 
+ ## Folder Structure
+ ```
+ swapsewa-full-main/
+   app/                # Next.js app directory (frontend & API routes)
+   backend/            # Express backend (API, models, controllers)
+   components/         # Shared React components
+   hooks/              # Custom React hooks
+   lib/                # Utility libraries
+   public/             # Static assets
+   scripts/            # Helper scripts (e.g., commit timestamp)
+   styles/             # Global styles
+   test/               # Test projects and files
+   tools/              # Developer tools
+ ```
+ 
+ ## Getting Started
+ 
+ ### Prerequisites
+ - Node.js (v18+ recommended)
+ - npm or yarn
+ - MongoDB instance (local or cloud)
+ 
+ ### 1. Clone the Repository
+ ```bash
+ git clone https://github.com/lakshmir22/SwapSewa-mumbAI-hack.git
+ cd swapsewa-full-main1/swapsewa-full-main
+ ```
+ 
+ ### 2. Install Dependencies
+ ```bash
+ npm install
+ # or
+ yarn install
+ ```
+ 
+ ### 3. Configure Environment Variables
+ Copy `.env.example` to `.env` and fill in the required values:
+ ```bash
+ cp .env.example .env
+ ```
+ Set up:
+ - `MONGODB_URI` (your MongoDB connection string)
+ - `JWT_SECRET` (for backend auth)
+ - `FRONTEND_URL` (e.g., http://localhost:3000)
+ - Any other required keys
+ 
+ ### 4. Run the Development Servers
+ #### Frontend (Next.js)
+ ```bash
+ npm run dev
+ # or
+ yarn dev
+ ```
+ 
+ #### Backend (Express)
+ ```bash
+ cd backend
+ npm install
+ node server.js
+ ```
+ 
+ ### 5. Open in Browser
+ Visit [http://localhost:3000](http://localhost:3000) to use the app.
+ 
+ ## Deployment
+ - **Frontend:** Deploy to Vercel (recommended)
+ - **Backend:** Deploy to Railway, Render, or your preferred Node.js host
+ - See `DEPLOYMENT.md` for detailed deployment instructions
+ 
+ ## Contributing
+ 1. Fork the repository
+ 2. Create a new branch (`git checkout -b feature/your-feature`)
+ 3. Commit your changes (`git commit -m 'Add new feature'`)
+ 4. Push to your fork (`git push origin feature/your-feature`)
+ 5. Open a Pull Request
+ 
+ ## License
+ This project is licensed under the MIT License.
+ 
+ ## Contact
+ For questions or support, open an issue or contact [lakshmir22](https://github.com/lakshmir22).
